@@ -12,10 +12,9 @@ function App() {
 
   return (
     <>
-      <SideNav />
-      <div id="detail">
-        <Outlet />
-      </div>
+      {/* <div id="detail"> */}
+      <Outlet />
+      {/* </div> */}
     </>
   );
 }

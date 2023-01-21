@@ -2,13 +2,13 @@ import React, { useEffect, useState } from "react";
 import { Link } from "react-router-dom";
 import useTodos from "../../utils/hooks/useTodos";
 
-export default function SideNav() {
+export default function SideNav({ item }) {
   const { todoItems, formatDataToObj } = useTodos();
   const [todoList, setTodoList] = useState({});
 
   useEffect(() => {
-    if (todoItems) setTodoList(formatDataToObj(todoItems));
-  }, [todoItems]);
+    if (todoItems) setTodoList(formatDataToObj(item));
+  }, [item]);
 
   const displayTodoNavs = () => {
     let list = [];
